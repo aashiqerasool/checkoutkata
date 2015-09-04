@@ -2,11 +2,14 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h2>1. Choose your item and click add to add to basket</h2>
-      <select name="items">
-        <option value="A">A - Unit Price: 50 - Special Price: 3 for 130</option>
+      <select id="itemselector">
+<!--         <option value="A">A - Unit Price: 50 - Special Price: 3 for 130</option>
         <option value="B">B - Unit Price: 30 - Special Price: 2 for 45</option>
         <option value="C">C - Unit Price: 20</option>
-        <option value="D">D - Unit Price: 15</option>
+        <option value="D">D - Unit Price: 15</option> -->
+        {{#each item}}
+        <option value="{{sku}}">{{sku}} - Unit Price: {{unitPrice}} {{#if specialPrice}} - Special Price: {{specialPrice}}{{/if}}</option>
+        {{/each}}
       </select>
       <button name="addBtn">Add to basket</button>
     </div>
