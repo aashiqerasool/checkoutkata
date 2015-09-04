@@ -1,18 +1,26 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
+Session.setDefault("selectedItem", Items.findOne({sku: 'A'}));
+console.log(Session.get("selectedItem"));
+
 Template.Home.events({
   "change #itemselector": function(evt) {
     console.log(Session.get("selectedItem"));
     var newValue = $(evt.target).val();
     var oldValue = Session.get("selectedItem");
     if (newValue != oldValue) {
-      // value changed, let's do something
-//       console.log(Session.get("selectedItem"));
+      //console.log(Session.get("selectedItem"));
     }
     Session.set("selectedItem", newValue);
     console.log(Session.get("selectedItem"));
-}
+  },
+  "click #addBtn": function() {
+    console.log("Add " + Session.get("selectedItem") + " added to basket");
+    var selectedItem = Items.findOne({sku: Session.get("selectedItem")});
+    console.log(selectedItem);
+    Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
+  }                   
 });
 
 /*****************************************************************************/

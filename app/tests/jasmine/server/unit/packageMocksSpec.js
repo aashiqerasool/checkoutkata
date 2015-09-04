@@ -7089,7 +7089,7 @@ var packageMetadata = {
                 },
                 "version": {
                   "type": "constant",
-                  "value": "0ea50a9c31b0365b9532652f6c30c036d4a8fc24"
+                  "value": "6f7c5a334bd87a03a47c15d824db059f16ec55cf"
                 },
                 "PUBLIC_SETTINGS": {
                   "type": "object"
@@ -7213,7 +7213,7 @@ var packageMetadata = {
             },
             "connections": {
               "type": "constant",
-              "value": 1
+              "value": 0
             },
             "timeout": {
               "type": "constant",
@@ -7862,7 +7862,7 @@ var packageMetadata = {
       "members": {
         "autoupdateVersion": {
           "type": "constant",
-          "value": "3f22e10f6e93a73c31e213d037a16f83acfd690d"
+          "value": "0e060ef432c338e02ee8e28144aba75c44deaf50"
         },
         "autoupdateVersionRefreshable": {
           "type": "constant",
@@ -9628,7 +9628,84 @@ var packageMetadata = {
                 },
                 "pid": {
                   "type": "constant",
-                  "value": 21039
+                  "value": 580
+                },
+                "fout": {
+                  "type": "constant",
+                  "value": 27
+                },
+                "child": {
+                  "type": "object",
+                  "members": {
+                    "domain": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "signalCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "exitCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "pid": {
+                      "type": "constant",
+                      "value": 580
+                    },
+                    "stdin": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdout": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stderr": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdio": {
+                      "type": "array"
+                    },
+                    "spawn": {
+                      "type": "function"
+                    },
+                    "kill": {
+                      "type": "function"
+                    },
+                    "ref": {
+                      "type": "function"
+                    },
+                    "unref": {
+                      "type": "function"
+                    },
+                    "setMaxListeners": {
+                      "type": "function"
+                    },
+                    "emit": {
+                      "type": "function"
+                    },
+                    "addListener": {
+                      "type": "function",
+                      "refID": 17
+                    },
+                    "on": {
+                      "ref": 17
+                    },
+                    "once": {
+                      "type": "function"
+                    },
+                    "removeListener": {
+                      "type": "function"
+                    },
+                    "removeAllListeners": {
+                      "type": "function"
+                    },
+                    "listeners": {
+                      "type": "function"
+                    }
+                  }
                 },
                 "getTaskName": {
                   "type": "function"
