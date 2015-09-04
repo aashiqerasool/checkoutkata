@@ -3,7 +3,7 @@
 /*****************************************************************************/
 
 Meteor.methods({
-  'server/method_name': function () {
+  'server/insert': function () {
     // server method logic
   }
 });

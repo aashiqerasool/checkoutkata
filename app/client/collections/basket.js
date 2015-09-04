@@ -1,5 +1,5 @@
 //Declare Mongo Collection to be used on both client and server
-Basket = new Mongo.Collection('basket');
+Basket = new Mongo.Collection(null);
 
 //Define Items collection schema using aldeed:simple-schema
 Basket.attachSchema(new SimpleSchema({

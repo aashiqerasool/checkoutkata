@@ -2,11 +2,27 @@
     <div class="panel panel-default">
     <div class="panel-body">
       <h2>2. Your Basket</h2>
-      <ul>
+<!--       <ul>
         {{#each basket}}
         <li>{{sku}} - {{unitPrice}} - {{qty}}</li>
         {{/each}}
-      </ul>
+      </ul> -->
+      <table cellspacing="10" border="1">
+  <tr>
+    <th>SKU</th>
+    <th>Unit Price</th>
+    <th>Quantity</th>
+    <th>Line Total</th>
+  </tr>
+  {{#each basket}}
+  <tr>
+    <td>{{sku}}</td>
+    <td>{{unitPrice}}</td>
+    <td>{{qty}}</td>
+    <td></td>
+  </tr>
+  {{/each}}
+</table>
     </div>
   </div>
 </template>

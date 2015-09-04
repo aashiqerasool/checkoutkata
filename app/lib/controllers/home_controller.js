@@ -7,6 +7,7 @@ HomeController = RouteController.extend({
   
   subscriptions: function() {
     this.subscribe('items');
+//     this.subscribe('basketHelperPub'); //to manage local basket collection. Does not work.
   },
   
   // Subscriptions or other things we want to "wait" on. This also
