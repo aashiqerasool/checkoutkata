@@ -1,0 +1,12 @@
+<template name="Basket">
+    <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>2. Your Basket</h2>
+      <ul>
+        {{#each basket}}
+        <li>{{sku}} - {{unitPrice}} - {{qty}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>
