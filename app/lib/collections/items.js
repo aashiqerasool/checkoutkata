@@ -1,6 +1,17 @@
 //Declare Mongo Collection to be used on both client and server
 Items = new Mongo.Collection('items');
 
+specialPriceObjSchema = new SimpleSchema({
+  spQty: {
+    type: Number,
+    label: "Special Qty",
+  },
+  price: {
+    type: Number,
+    label: "Special Price",
+  }  
+});
+
 //Define Items collection schema using aldeed:simple-schema
 Items.attachSchema(new SimpleSchema({
   sku:{
@@ -12,12 +23,14 @@ Items.attachSchema(new SimpleSchema({
     type: Number,
     label: "Unit Price",
   },
-  specialPrice:
-  {
-    type: String,
+  specialPrice: {
+    type: specialPriceObjSchema,
     label: "Special Price",
-    optional: true
-  }
+  //     decimal: true,
+  //     minCount: 2,
+  //     maxCount: 2,
+  //     min:1,
+    },
 }));
 
 

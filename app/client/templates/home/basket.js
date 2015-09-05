@@ -15,17 +15,22 @@ Template.Basket.events({
     Session.set("selectedItem", newValue);
     console.log(Session.get("selectedItem"));
   },
-  "click #addBtn": function() {
-    console.log("Add " + Session.get("selectedItem") + " added to basket");
-    var selectedItem = Items.findOne({sku: Session.get("selectedItem")});
-    console.log(selectedItem);
-//     if(Basket.findOne({sku: selectedItem.sku})) {
-//       Basket.update({sku: selectedItem.sku}, {qty: selectedItem.qty++});
+//   "click #addBtn": function() {
+// //     console.log("Add " + Session.get("selectedItem") + " added to basket");
+//     var selectedItem = Items.findOne({sku: Session.get("selectedItem")});
+// //     console.log(selectedItem);
+//     var existingItem = Basket.findOne({sku: selectedItem.sku});
+//     console.log(existingItem);
+//     if(existingItem) {
+//       console.log(selectedItem.sku + " exists in basket");
+//       Basket.update({sku: selectedItem.sku}, {
+//         $set: {qty: qty++}
+//       });
 //     }
 //     else{
-      Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
+//       Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
 //     }
-  }                   
+//   }                   
 });
 
 /*****************************************************************************/

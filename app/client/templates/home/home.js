@@ -16,11 +16,19 @@ Template.Home.events({
     console.log(Session.get("selectedItem"));
   },
   "click #addBtn": function() {
-    console.log("Add " + Session.get("selectedItem") + " added to basket");
+//     console.log("Add " + Session.get("selectedItem") + " added to basket");
     var selectedItem = Items.findOne({sku: Session.get("selectedItem")});
-    console.log(selectedItem);
-    Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
-  }                   
+//     console.log(selectedItem);
+    var existingItem = Basket.findOne({sku: selectedItem.sku});
+    console.log(existingItem);
+    if(existingItem) {
+      console.log(selectedItem.sku + " exists in basket");
+      Basket.update(existingItem, {$inc: {qty: 1} });
+    }
+    else{
+      Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
+    }
+  }                  
 });
 
 /*****************************************************************************/
