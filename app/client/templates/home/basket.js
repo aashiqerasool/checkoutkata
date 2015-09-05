@@ -19,7 +19,12 @@ Template.Basket.events({
     console.log("Add " + Session.get("selectedItem") + " added to basket");
     var selectedItem = Items.findOne({sku: Session.get("selectedItem")});
     console.log(selectedItem);
-    Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
+//     if(Basket.findOne({sku: selectedItem.sku})) {
+//       Basket.update({sku: selectedItem.sku}, {qty: selectedItem.qty++});
+//     }
+//     else{
+      Basket.insert({sku: selectedItem.sku, unitPrice: selectedItem.unitPrice, qty: 1});
+//     }
   }                   
 });
 
